@@ -8,7 +8,7 @@ console.log( ">>> Bienvenue dans notre chat" );
 console.log( ">>> Que voulez-vous faire?" );
 console.log( "" );
 console.log( ">>> 1) Créer un serveur." );
-console.log( ">>> 2) Créer vous connecter au serveur." );
+console.log( ">>> 2) Vous connecter au serveur." );
 
 terminal.question( ">>> [1/2] : ", ( response ) => {
     terminal.pause();

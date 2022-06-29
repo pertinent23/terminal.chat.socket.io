@@ -11,16 +11,12 @@ module.exports = ( terminal ) => {
             terminal.question( ">>> Quel est votre username? ", ( data ) => {
                 username = data;
                 console.log( ">>> Entrer un message et valider sur entrer: " );
-                terminal.write( ">>> " );
-
                 io.on( 'message', ( data ) => {
                     console.log( `@${data.username}: ${data.message}` );
-                    terminal.write( ">>> " );
                 } );
             } );
 
             terminal.on( 'line', ( line ) => {
-                terminal.write( ">>> " );
                 io.emit( 'message', {
                     username, 
                     message: line
